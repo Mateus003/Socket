@@ -2,7 +2,7 @@
 - **Professor:** Kelvin Lopes Dias
 - **Aluno:** Mateus da Silva Olegario
 ## Sobre o Projeto:
-O projeto em Kotlin que desenvolvi é uma aplicação de sockets que permite realizar operações matemáticas através da comunicação via UDP ou TCP. Este projeto foi organizado em duas pastas principais: "tcp" e "udp", onde os arquivos "clientTCP" e "ServerTCP" foram colocados na pasta "tcp", enquanto os arquivos "clientUDP" e "ServerUDP" foram colocados na pasta "udp". Além disso, o arquivo relacionado ao sistema de nomes de domínio (DNS) foi mantido separado das pastas UDP e TCP.
+O projeto em Kotlin que desenvolvi é uma aplicação de sockets que permite realizar operações matemáticas através da comunicação via UDP ou TCP. Este projeto foi organizado em duas pastas principais: "tcp" e "udp", onde os arquivos "ClientTCP" e "ServerTCP" foram colocados na pasta "tcp", enquanto os arquivos "ClientUDP" e "ServerUDP" foram colocados na pasta "udp". Além disso, o arquivo relacionado ao sistema de nomes de domínio (DNS) foi mantido separado das pastas UDP e TCP.
 #### Para implementar a funcionalidade de sockets, foram utilizadas as seguintes bibliotecas: 
 
 - **java.net.InetAddress:** Essa biblioteca foi utilizada para lidar com endereços IP e nomes de hosts, permitindo a resolução de nomes de domínio em endereços IP.
