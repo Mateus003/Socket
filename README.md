@@ -25,7 +25,7 @@ Observando o terminal do cliente, tanto do TCP, como no UDP, no geral, o tempo t
 ## Como executar o código:
 - **Instale o IntelliJ IDEA Community Edition:** Você pode fazer o download do IntelliJ IDEA Community Edition no site de download: https://www.jetbrains.com/idea/
 
-- **Instale a JDK (Java Development Kit):** Certifique-se de que a JDK esteja instalada em sua máquina. Você pode baixar a JDK diretamente do site oficial da Oracle ou optar por uma distribuição OpenJDK de código aberto. Verifique se a versão da JDK é compatível com o Kotlin e o Java usados em seu projeto.
+- **Instale a JDK (Java Development Kit):** Certifique-se de que a JDK esteja instalada em sua máquina. Você pode baixar a JDK diretamente do site oficial da Oracle ou optar por uma distribuição OpenJDK de código aberto.
 
 - **Configure o ambiente da IDE:** Siga as instruções fornecidas neste vídeo tutorial para configurar o ambiente do IntelliJ IDEA, garantindo que não haja problemas na execução do código: https://www.youtube.com/watch?v=xRBd2l580Ac&t=19s&ab_channel=StackMobile
 
