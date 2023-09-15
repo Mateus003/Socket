@@ -1,4 +1,4 @@
-# Projeto de Sockets - Redes de Computadores(IF968)
+# Projeto de Sockets - Redes de Computadores(IF975)
 - **Professor:** Kelvin Lopes Dias
 - **Aluno:** Mateus da Silva Olegario
 ## Sobre o Projeto:
