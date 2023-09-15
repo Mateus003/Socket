@@ -7,7 +7,6 @@ import java.util.concurrent.TimeUnit
 
 fun main() {
     val serverIp = "127.0.0.1"
-    val serverPort = 64321
 
     val dnsTcpAddress = "127.0.0.1"
     val dnsTcpPort = 1025
@@ -55,14 +54,14 @@ fun main() {
 
         println("")
         println("O resultado da operação $equacao é $response")
-        println("Tempo total: ${(endTime - startTime) / 1e5} segundos")
+        println("Tempo total: ${(endTime - startTime) / 1e5} milisegundos")
     }
 
     val servicoRemover = "deletar servidorUDP"
     val servicoRemoverData = servicoRemover.toByteArray()
     clientDnsSocket.send(DatagramPacket(servicoRemoverData, servicoRemoverData.size, InetAddress.getByName(dnsTcpAddress), dnsTcpPort))
-
-    print("Digite \"fim\" para finalizar a conexão: ")
+    println()
+    print("Para encerrar a conexão, basta digitar \"encerrar\": ")
     val mensagem = readLine() ?: ""
     val mensagemData = mensagem.toByteArray()
     val mensagemPacket = DatagramPacket(mensagemData, mensagemData.size, InetAddress.getByName(enderecoIP), porta)

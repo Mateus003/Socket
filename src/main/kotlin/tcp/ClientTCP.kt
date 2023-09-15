@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit
 
 fun clientTCP(equacoes: List<String>) {
     val serverIp = "127.0.0.1"
-    val serverPort = 12346
+    val serverPort = 19052
 
     val dnsTcpClient = DatagramSocket()
 
@@ -26,10 +26,9 @@ fun clientTCP(equacoes: List<String>) {
     val host = String(ipPacket.data, 0, ipPacket.length)
     val lista = host.split(":")
     val enderecoIP = lista[1]
-    val porta = lista[2].toInt()
-    println("Endereço e porta do servidor: $enderecoIP:$porta")
+    println("Endereço e porta do servidor: $enderecoIP:$serverPort")
 
-    val clientSocket = Socket(enderecoIP, porta)
+    val clientSocket = Socket(enderecoIP, serverPort)
 
 
     println("Conexão realizada com sucesso\uD83D\uDFE2")
@@ -56,14 +55,14 @@ fun clientTCP(equacoes: List<String>) {
         println("")
         println("O resultado da operação $valor é $response")
         val elapsedTime = (endTime - startTime).toDouble() / TimeUnit.SECONDS.toNanos(1)
-        println("Tempo total: %.5f segundos".format(elapsedTime))
+        println("Tempo total: %.5f milissegundos".format(elapsedTime))
     }
 
-    val servicoFim = "1".toByteArray()
+    val servicoFim = "fim".toByteArray()
     val dnsPacketFim = DatagramPacket(servicoFim, servicoFim.size, InetAddress.getByName("127.0.0.1"), 5000)
     dnsTcpClient.send(dnsPacketFim)
     println()
-    print("Para encerrar a conexão, basta digitar \"fim\" ")
+    print("Para encerrar a conexão, basta digitar \"encerrar\": ")
     val mensagem = readLine()?.toLowerCase() ?: ""
     outputStream.write(mensagem.toByteArray())
     outputStream.flush()

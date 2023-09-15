@@ -8,10 +8,9 @@ import java.util.concurrent.Executors
 
 fun main() {
     val serverIp = "127.0.0.1"
-    val serverPort = 12345
+    val serverPort = 19052
 
     val dnsUdpSocket = DatagramSocket()
-    val dnsServerAddress = InetAddress.getByName(serverIp)
 
     val mensagem = "register servidorTCP 127.0.0.1 12345"
     val dnsPacket = DatagramPacket(
@@ -57,14 +56,18 @@ fun main() {
                     val bytesRead = input.read(buffer)
                     if (bytesRead == -1) break
 
-                    val operacao = String(buffer, 0, bytesRead)
-                    if (operacao == "fim") break
-
+                    val operacao = String(buffer, 0, bytesRead).trim()
+                    if (operacao.equals("encerrar", ignoreCase = true)) {
+                        println("Cliente solicitou o encerramento da conexão.")
+                        dnsUdpSocket.close()
+                        break
+                    }
                     println("Equação recebida: $operacao")
 
                     val resposta = calculadora(operacao).toString()
                     output.write(resposta.toByteArray())
                     println("Resposta enviada: $resposta")
+                    println("")
                 }
 
                 clientSocket.close()

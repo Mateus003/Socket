@@ -80,7 +80,9 @@ fun main() {
         val data = String(packet.data, 0, packet.length)
         val operacao = data
 
-        if (operacao == "fim") {
+        if (operacao == "encerrar") {
+            println("Cliente solicitou o encerramento da conexão.")
+            println("Process finished with exit code 0\n")
             break
         }
 
@@ -92,6 +94,7 @@ fun main() {
 
         serverSocket.send(responsePacket)
         println("Resposta enviada: $resposta")
+        println("")
     }
 
     serverSocket.close()
