@@ -24,7 +24,7 @@ O projeto foi estruturado seguindo este fluxo específico: começa-se por inicia
 Observando o terminal do cliente, tanto do TCP, como no UDP, no geral, o tempo total do TCP foi menor em relação ao UDP. Por exemplo,o tempo total da primeira requisição do cliente TCP foi significativamente menor em comparação com o cliente UDP. No cliente TCP, o tempo total foi de apenas 0,0089 milissegundos, enquanto no cliente UDP, a primeira requisição teve um tempo total de 70,27 milissegundos. Essa discrepância inicial de tempo é notável e representa uma exceção em relação ao desempenho esperado desses protocolos. Geralmente, o UDP é mais rápido, mas não oferece as mesmas garantias de confiabilidade que o TCP.
 
 
-### Capturas realizadas:
+## Capturas realizadas:
 - **Captura do DNS:**
 
 - **Captura do Servidor UDP:**
