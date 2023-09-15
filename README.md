@@ -19,3 +19,6 @@ O projeto em Kotlin que desenvolvi é uma aplicação de sockets que permite rea
 
 ### Fluxo do Projeto:
 O projeto foi estruturado seguindo este fluxo específico: começa-se por iniciar o servidor DNS, seguido pela inicialização dos servidores TCP e/ou UDP, que estabelecem conexão com o DNS. Uma vez que estes servidores estejam online, é possível iniciar os clientes TCP e/ou UDP. Quando um cliente efetua uma solicitação, ele pede ao DNS para obter informações sobre o servidor. Em seguida, através dos clientes, é possível enviar operações matemáticas para que sejam calculadas no servidor. Após o processamento, o cliente recebe a resposta da operação e o horário em que ela foi realizada.
+
+### Análise do tempo de requisição
+Observando o terminal do cliente, tanto do TCP, como no UDP, no geral, o tempo total do TCP foi menor em relação ao UDP. Por exemplo,o tempo total da primeira requisição do cliente TCP foi significativamente menor em comparação com o cliente UDP. No cliente TCP, o tempo total foi de apenas 0,0089 milissegundos, enquanto no cliente UDP, a primeira requisição teve um tempo total de 70,27 milissegundos. Essa discrepância inicial de tempo é notável e representa uma exceção em relação ao desempenho esperado desses protocolos. Geralmente, o UDP é mais rápido, mas não oferece as mesmas garantias de confiabilidade que o TCP.
